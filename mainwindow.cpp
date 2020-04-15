@@ -13,3 +13,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_lineEditInput_textChanged()
+{
+    qDebug() << "lineEditInput text changed";
+}
