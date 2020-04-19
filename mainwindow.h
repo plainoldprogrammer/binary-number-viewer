@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QDebug>
+#include "byte.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
