@@ -19,6 +19,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Byte byte;
 
 private slots:
     void on_lineEditInput_textChanged();

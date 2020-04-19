@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    Byte byte;
     byte.printData();
 }
 
@@ -17,5 +16,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_lineEditInput_textChanged()
 {
-    qDebug() << "lineEditInput text changed";
+    QString decimalNumber = ui->lineEditInput->text();
+    byte.setFromDecimal(decimalNumber);
+    ui->lineEditOutput->setText(byte.getData());
+    qDebug() << byte.getData();
 }
