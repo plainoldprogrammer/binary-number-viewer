@@ -22,6 +22,6 @@ private:
     Byte byte;
 
 private slots:
-    void on_lineEditInput_textChanged();
+    void on_pushButtonConvert_clicked();
 };
 #endif // MAINWINDOW_H

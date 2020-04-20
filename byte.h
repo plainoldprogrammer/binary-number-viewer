@@ -6,7 +6,6 @@
 
 #define BYTE_SIZE 8
 
-
 class Byte
 {
 public:
@@ -17,7 +16,7 @@ public:
     void clear();
 
 private:
-    bool bit[8] = { false, false, false, false, false, false, false, false };
+    bool bit[8];
 };
 
 #endif // BYTE_H

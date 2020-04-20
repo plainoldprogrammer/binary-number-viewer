@@ -60,7 +60,7 @@
      <string>Output:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Convert">
+   <widget class="QPushButton" name="pushButtonConvert">
     <property name="geometry">
      <rect>
       <x>160</x>

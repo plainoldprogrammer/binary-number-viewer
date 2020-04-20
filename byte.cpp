@@ -2,7 +2,7 @@
 
 Byte::Byte()
 {
-
+    clear();
 }
 
 void Byte::logData()
@@ -22,7 +22,6 @@ void Byte::setFromDecimal(QString decimal)
     for (int i = BYTE_SIZE; i>= 1; i--)
     {
         int limit = pow(2, i - 1);
-        qDebug() << "limit is " << limit << " and decimal is " << decimalNumber;
 
         if (decimalNumber >= limit)
         {

@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    byte.logData();
 }
 
 MainWindow::~MainWindow()
@@ -14,9 +13,18 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_lineEditInput_textChanged()
+void MainWindow::on_pushButtonConvert_clicked()
 {
     QString decimalNumber = ui->lineEditInput->text();
-    byte.setFromDecimal(decimalNumber);
-    ui->lineEditOutput->setText(byte.getData());
+
+    if (decimalNumber.toInt() <= 255)
+    {
+        byte.setFromDecimal(decimalNumber);
+        ui->lineEditOutput->setText(byte.getData());
+    }
+    else
+    {
+        byte.clear();
+        ui->lineEditOutput->setText("NaN");
+    }
 }
