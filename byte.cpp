@@ -9,7 +9,7 @@ void Byte::logData()
 {
     for (int i = BYTE_SIZE; i >= 1; i--)
     {
-        qDebug() << "byte[" << i - 1 << "]: " << data[i - 1];
+        qDebug() << "byte[" << i - 1 << "]: " << bit[i - 1];
     }
 }
 
@@ -26,7 +26,7 @@ void Byte::setFromDecimal(QString decimal)
 
         if (decimalNumber >= limit)
         {
-            data[i - 1] = true;
+            bit[i - 1] = true;
             decimalNumber = decimalNumber - limit;
         }
     }
@@ -38,7 +38,7 @@ QString Byte::getData()
 
     for (int i = BYTE_SIZE; i >= 1; i--)
     {
-        if (data[i - 1] == true)
+        if (bit[i - 1] == true)
         {
             converted.append("1");
             converted.append(" ");
@@ -57,6 +57,6 @@ void Byte::clear()
 {
     for (int i = BYTE_SIZE; i >= 1; i--)
     {
-        data[i - 1] = false;
+        bit[i - 1] = false;
     }
 }

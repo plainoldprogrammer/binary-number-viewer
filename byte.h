@@ -17,7 +17,7 @@ public:
     void clear();
 
 private:
-    bool data[8] = { false, false, false, false, false, false, false, false };
+    bool bit[8] = { false, false, false, false, false, false, false, false };
 };
 
 #endif // BYTE_H
