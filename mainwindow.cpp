@@ -17,13 +17,35 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButtonConvert_clicked()
 {
     QString decimalNumber = ui->lineEditInput->text();
+    bool isNotANumber = false;
 
-    if ((decimalNumber.toInt() >= 0) && (decimalNumber.toInt() <= 255))
+    QRegExp re("\\d*");
+    if (re.exactMatch(decimalNumber))
     {
-        byte.setFromDecimal(decimalNumber);
-        ui->lineEditOutput->setText(byte.getData());
+        if (!decimalNumber.compare("") == 0)
+        {
+            if ((decimalNumber.toInt() >= 0) && (decimalNumber.toInt() <= 255))
+            {
+                byte.setFromDecimal(decimalNumber);
+                ui->lineEditOutput->setText(byte.getData());
+            }
+            else
+            {
+                isNotANumber = true;
+            }
+        }
+        else
+        {
+            isNotANumber = true;
+        }
     }
     else
+    {
+        isNotANumber = true;
+    }
+
+
+    if (isNotANumber)
     {
         byte.clear();
         ui->lineEditOutput->setText("NaN");

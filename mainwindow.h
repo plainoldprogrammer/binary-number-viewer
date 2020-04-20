@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QDebug>
+#include <QRegExp>
 #include "byte.h"
 
 QT_BEGIN_NAMESPACE
