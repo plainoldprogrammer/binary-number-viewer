@@ -14,6 +14,7 @@ public:
     void logData();
     void setFromDecimal(QString);
     QString getData();
+    void clear();
 
 private:
     bool data[8] = { false, false, false, false, false, false, false, false };

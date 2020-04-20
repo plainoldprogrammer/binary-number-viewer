@@ -15,6 +15,8 @@ void Byte::logData()
 
 void Byte::setFromDecimal(QString decimal)
 {
+    clear();
+
     int decimalNumber = decimal.toInt();
 
     for (int i = BYTE_SIZE; i>= 1; i--)
@@ -49,4 +51,12 @@ QString Byte::getData()
     }
 
     return converted;
+}
+
+void Byte::clear()
+{
+    for (int i = BYTE_SIZE; i >= 1; i--)
+    {
+        data[i - 1] = false;
+    }
 }
