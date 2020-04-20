@@ -18,7 +18,7 @@ void MainWindow::on_pushButtonConvert_clicked()
 {
     QString decimalNumber = ui->lineEditInput->text();
 
-    if (decimalNumber.toInt() <= 255)
+    if ((decimalNumber.toInt() >= 0) && (decimalNumber.toInt() <= 255))
     {
         byte.setFromDecimal(decimalNumber);
         ui->lineEditOutput->setText(byte.getData());
