@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButtonConvert_clicked()
 {
     QString decimalNumber = ui->lineEditInput->text();
-    bool isNotANumber = false;
+    bool isDecimalInputValid = false;
 
     QRegExp re("\\d*");
     if (re.exactMatch(decimalNumber))
@@ -28,24 +28,12 @@ void MainWindow::on_pushButtonConvert_clicked()
             {
                 byte.setFromDecimal(decimalNumber);
                 ui->lineEditOutput->setText(byte.getData());
-            }
-            else
-            {
-                isNotANumber = true;
+                isDecimalInputValid = true;
             }
         }
-        else
-        {
-            isNotANumber = true;
-        }
-    }
-    else
-    {
-        isNotANumber = true;
     }
 
-
-    if (isNotANumber)
+    if (!isDecimalInputValid)
     {
         byte.clear();
         ui->lineEditOutput->setText("NaN");
