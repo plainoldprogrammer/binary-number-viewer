@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>370</width>
-    <height>272</height>
+    <height>258</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,14 +37,14 @@
    <widget class="QLabel" name="labelInput">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>40</y>
-      <width>47</width>
-      <height>14</height>
+      <width>51</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Input:</string>
+     <string>Decimal:</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelOutput">
@@ -52,12 +52,12 @@
      <rect>
       <x>30</x>
       <y>70</y>
-      <width>47</width>
-      <height>14</height>
+      <width>51</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Output:</string>
+     <string>Binary:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonConvert">
