@@ -1,7 +1,7 @@
 #ifndef BYTE_H
 #define BYTE_H
 
-#include <qDebug>
+#include <QDebug>
 #include <cmath>
 
 #define BYTE_SIZE 8
