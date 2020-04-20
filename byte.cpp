@@ -59,3 +59,7 @@ void Byte::clear()
         bit[i - 1] = false;
     }
 }
+
+void Byte::leftShift()
+{
+}

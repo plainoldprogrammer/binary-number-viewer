@@ -47,3 +47,8 @@ void MainWindow::customizeWindow()
     setMinimumSize(width(), height());
     setMaximumSize(width(), height());
 }
+
+void MainWindow::on_pushButtonBitShiftLeft_clicked()
+{
+    qDebug () << "Shifting the bits to the left";
+}

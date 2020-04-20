@@ -25,5 +25,6 @@ private:
 
 private slots:
     void on_pushButtonConvert_clicked();
+    void on_pushButtonBitShiftLeft_clicked();
 };
 #endif // MAINWINDOW_H

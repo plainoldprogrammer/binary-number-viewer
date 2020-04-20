@@ -14,6 +14,7 @@ public:
     void setFromDecimal(QString);
     QString getData();
     void clear();
+    void leftShift();
 
 private:
     bool bit[8];
