@@ -42,7 +42,7 @@ void MainWindow::on_pushButtonConvert_clicked()
 
 void MainWindow::customizeWindow()
 {
-    setWindowTitle("Binary Number Viewer v0.1 (Dev)");
+    setWindowTitle("Binary Number Viewer v0.2 (Dev)");
 
     setMinimumSize(width(), height());
     setMaximumSize(width(), height());
