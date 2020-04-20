@@ -29,6 +29,7 @@ void MainWindow::on_pushButtonConvert_clicked()
                 byte.setFromDecimal(decimalNumber);
                 ui->lineEditOutput->setText(byte.getData());
                 isDecimalInputValid = true;
+                enableShiftOperations();
             }
         }
     }
@@ -46,6 +47,9 @@ void MainWindow::customizeWindow()
 
     setMinimumSize(width(), height());
     setMaximumSize(width(), height());
+
+    ui->pushButtonConvert->setEnabled(false);
+    disableShiftOperations();
 }
 
 void MainWindow::on_pushButtonBitShiftLeft_clicked()
@@ -56,4 +60,21 @@ void MainWindow::on_pushButtonBitShiftLeft_clicked()
 void MainWindow::on_pushButtonBitShiftRight_clicked()
 {
     qDebug() << "Shifting the bits to the right";
+}
+
+void MainWindow::on_lineEditInput_textChanged()
+{
+    ui->pushButtonConvert->setEnabled(true);
+}
+
+void MainWindow::enableShiftOperations()
+{
+    ui->pushButtonBitShiftLeft->setEnabled(true);
+    ui->pushButtonBitShiftRight->setEnabled(true);
+}
+
+void MainWindow::disableShiftOperations()
+{
+    ui->pushButtonBitShiftLeft->setEnabled(false);
+    ui->pushButtonBitShiftRight->setEnabled(false);
 }

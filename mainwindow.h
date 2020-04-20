@@ -17,15 +17,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void customizeWindow();
+    void enableShiftOperations();
+    void disableShiftOperations();
 
 private:
     Ui::MainWindow *ui;
     Byte byte;
-    void customizeWindow();
 
 private slots:
     void on_pushButtonConvert_clicked();
     void on_pushButtonBitShiftLeft_clicked();
     void on_pushButtonBitShiftRight_clicked();
+    void on_lineEditInput_textChanged();
 };
 #endif // MAINWINDOW_H
