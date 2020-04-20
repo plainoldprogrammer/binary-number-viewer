@@ -5,7 +5,7 @@ Byte::Byte()
 
 }
 
-void Byte::printData()
+void Byte::logData()
 {
     for (int i = BYTE_SIZE; i >= 1; i--)
     {

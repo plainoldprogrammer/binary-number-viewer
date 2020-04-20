@@ -11,7 +11,7 @@ class Byte
 {
 public:
     Byte();
-    void printData();
+    void logData();
     void setFromDecimal(QString);
     QString getData();
 
