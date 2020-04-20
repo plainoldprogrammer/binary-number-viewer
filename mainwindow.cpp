@@ -52,3 +52,8 @@ void MainWindow::on_pushButtonBitShiftLeft_clicked()
 {
     qDebug () << "Shifting the bits to the left";
 }
+
+void MainWindow::on_pushButtonBitShiftRight_clicked()
+{
+    qDebug() << "Shifting the bits to the right";
+}
