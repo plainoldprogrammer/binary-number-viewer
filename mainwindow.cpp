@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    customizeWindow();
 }
 
 MainWindow::~MainWindow()
@@ -27,4 +28,12 @@ void MainWindow::on_pushButtonConvert_clicked()
         byte.clear();
         ui->lineEditOutput->setText("NaN");
     }
+}
+
+void MainWindow::customizeWindow()
+{
+    setWindowTitle("Binary Number Viewer v0.1 (Dev)");
+
+    setMinimumSize(width(), height());
+    setMaximumSize(width(), height());
 }

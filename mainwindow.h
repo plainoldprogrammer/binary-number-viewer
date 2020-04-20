@@ -20,6 +20,7 @@ public:
 private:
     Ui::MainWindow *ui;
     Byte byte;
+    void customizeWindow();
 
 private slots:
     void on_pushButtonConvert_clicked();
